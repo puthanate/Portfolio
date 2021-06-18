@@ -28,19 +28,39 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header')
+      skillsHeader = document.querySelectorAll('.skills__header');
 
 function toggleSkills(){
     let itemClass = this.parentNode.className
     for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
+        skillsContent[i].className = 'skills__content skills__close';
     }
     if(itemClass === 'skills__content skills__close'){
-        this.parentNode.className = 'skills__content skills__open'
+        this.parentNode.className = 'skills__content skills__open';
     }
 }
 skillsHeader.forEach((el) =>{
     el.addEventListener('click',toggleSkills)
+})
+/*==================== Project enlarge modal  ====================*/
+const modalViews = document.querySelectorAll('.project__modal'),
+      modalBtns = document.querySelectorAll('.project__button'),
+      modalCloses = document.querySelectorAll('.project__modal-close');
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal');
+}
+modalBtns.forEach((modalBtn,i) =>{
+    modalBtn.addEventListener('click',() =>{
+        modal(i);
+    })
+})
+modalCloses.forEach((modalClose)=>{
+    modalClose.addEventListener('click', () =>{
+        modalViews.forEach((modalView)=>{
+            modalView.classList.remove('active-modal');
+        })
+    })
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
@@ -57,8 +77,6 @@ let swiper = new Swiper('.portfolio__container', {
         clickable: true,
     },
 });
-
-
 
 /*==================== TESTIMONIAL ====================*/
 
