@@ -438,13 +438,13 @@ img{
     background-color: var(--first-color);
 }
 .skills__html{
-    width:80%;
+    width:100%;
 }
 .skills__css{
-    width:70%;
+    width:100%;
 }
 .skills__js{
-    width: 70%;
+    width: 80%;
 }
 .skills__react{
     width: 10%
@@ -453,13 +453,13 @@ img{
     width: 80%;
 }
 .skills__c{
-    width: 60%;
+    width: 80%;
 }
 .skills__sql{
-    width:50%;
+    width:80%;
 }
 .skills__excel{
-    width: 90%;
+    width: 100%;
 }
 .skills__ppt{
     width: 80%;
