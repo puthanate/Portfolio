@@ -444,15 +444,9 @@ img{
     width:100%;
 }
 .skills__js{
-    width: 80%;
+    width: 100%;
 }
-.skills__react{
-    width: 10%
-}
-.skills__java{
-    width: 80%;
-}
-.skills__c{
+.skills__python{
     width: 80%;
 }
 .skills__sql{
@@ -462,7 +456,7 @@ img{
     width: 100%;
 }
 .skills__ppt{
-    width: 80%;
+    width: 100%;
 }
 .skills__close .skills__list{
     height: 0;
